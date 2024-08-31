@@ -27,7 +27,7 @@ command:
 
 # to this
 command:
-  - Kubedlv
+  - kubedlv
   - http-server
 ```
 
