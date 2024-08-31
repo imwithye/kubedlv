@@ -21,6 +21,7 @@ func main() {
 		return
 	}
 
+	fmt.Println("Running dlv with args:", dlvArgs)
 	err = RunDlv(dlvArgs)
 	if err != nil {
 		fmt.Println("Failed to run dlv:", err)
