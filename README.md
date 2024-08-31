@@ -12,7 +12,7 @@ However, this option is often unavailable due to missing Docker capabilities.
 
 ### The solution
 
-> You may use `go install github.com/imwithye/kubedlv@main` to install `kubedlv`.
+> You may use `go install github.com/imwithye/kubedlv@v1.0.0` to install `kubedlv`.
 
 1. Install or copy `dlv` and `kubedlv` to the running container.
 2. Open the YAML file of the running deployment, and in the command section,
@@ -44,5 +44,5 @@ http-server --host 0.0.0.0 --port 8080
 to
 
 ```bash
-dlv --listen=:2345 --headless=true --api-version=2 --continue --log exec http-server -- --host 0.0.0.0 --port 8080
+dlv --api-version=2 --listen=:2345 --headless=true --continue --accept-multiclient exec http-server -- --host 0.0.0.0 --port 8080
 ```
