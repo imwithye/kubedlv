@@ -35,12 +35,13 @@ func GetDlvArgs(cmd string, cmdArgs []string, config *DlvConfig) ([]string, erro
 	}
 
 	dlvArgs := []string{
-		fmt.Sprintf("--api-version=:%d", config.APIVersion),
+		fmt.Sprintf("--api-version=%d", config.APIVersion),
 		fmt.Sprintf("--listen=:%d", config.Port),
 		"--headless=true",
 	}
 	if config.Continue {
-		dlvArgs = append(dlvArgs, "--continue")
+		//goland:noinspection ALL
+		dlvArgs = append(dlvArgs, "--continue", "--accept-multiclient")
 	}
 	if config.Log {
 		dlvArgs = append(dlvArgs, "--log")
