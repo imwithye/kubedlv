@@ -12,7 +12,7 @@ However, this option is often unavailable due to missing Docker capabilities.
 
 ### The solution
 
-> You may use `go install github.com/imwithye/kubedlv@v1.0.0` to install `kubedlv`.
+> You may use `go install github.com/imwithye/kubedlv@v1.0.1` to install `kubedlv`.
 
 1. Install or copy `dlv` and `kubedlv` to the running container.
 2. Open the YAML file of the running deployment, and in the command section,
